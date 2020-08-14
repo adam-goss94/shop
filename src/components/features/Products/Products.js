@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import clsx from 'clsx';
 
 import { connect } from 'react-redux';
 import { getAll } from '../../../redux/productsRedux.js';
@@ -11,11 +10,11 @@ import {Product} from '../../common/Product/Product';
 class Component extends React.Component {
 
   render() {
-    const { className, products, category } = this.props;
+    const { products, category } = this.props;
     const filteredProducts = products.filter(function(el) {return el.category === category;});
 
     return (
-      <div className={clsx(className, styles.root)}>
+      <div className={styles.root}>
         { filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
             <Product key={product.id} {...product} />
@@ -30,7 +29,6 @@ class Component extends React.Component {
 Component.propTypes = {
   products: PropTypes.array,
   category: PropTypes.string,
-  className: PropTypes.string,
 };
 
 const mapStateToProps = (state) => ({
