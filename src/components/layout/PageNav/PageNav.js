@@ -1,37 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import clsx from 'clsx';
-
-// import { connect } from 'react-redux';
-// import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart  } from '@fortawesome/free-solid-svg-icons';
+import {NavLink} from 'react-router-dom';
 
 import styles from './PageNav.module.scss';
 
-const Component = ({className, children}) => (
+const Component = ({className}) => (
   <div className={clsx(className, styles.root)}>
-    <h2>PageNav</h2>
-    {children}
+    <div className='container'>
+      <div className='row'>
+        <div className={`col text-left ${styles.topLeft}`}>
+          <h1>TUTAJ LOGO</h1>
+        </div>
+        <div className={`col text-right ${styles.topRigth}`}>
+          <nav>
+            <NavLink exact to='/'>Home</NavLink>
+            <NavLink to='/tshirts'>T-shirts</NavLink>
+            <NavLink to='/hoodis'>Hoodis</NavLink>
+            <NavLink to='cart'><FontAwesomeIcon className={styles.icon} icon={faShoppingCart} /></NavLink>
+          </nav>
+        </div>
+      </div>
+    </div>
   </div>
 );
 
 Component.propTypes = {
-  children: PropTypes.node,
   className: PropTypes.string,
 };
 
-// const mapStateToProps = state => ({
-//   someProp: reduxSelector(state),
-// });
-
-// const mapDispatchToProps = dispatch => ({
-//   someAction: arg => dispatch(reduxActionCreator(arg)),
-// });
-
-// const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
-
 export {
   Component as PageNav,
-  // Container as PageNav,
   Component as PageNavComponent,
 };
