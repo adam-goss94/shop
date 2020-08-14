@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { getAll } from '../../../redux/productsRedux.js';
 
 import styles from './Products.module.scss';
+import {Product} from '../../common/Product/Product';
 
 class Component extends React.Component {
 
@@ -17,7 +18,7 @@ class Component extends React.Component {
       <div className={clsx(className, styles.root)}>
         { filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
-            <div key={product.id}>{product.category}</div>
+            <Product key={product.id} {...product} />
           ))
         ) : null
         }

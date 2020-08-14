@@ -6,6 +6,7 @@ export const initialState = {
       category: 'T-shirt',
       description: 'Opis produktu',
       price: '21,15',
+      image: 'src do zdjecia',
     },
     {
       id: '2',
@@ -13,6 +14,7 @@ export const initialState = {
       category: 'T-shirt',
       description: 'Opis produktu',
       price: '33,33',
+      image: 'src do zdjecia',
     },
     {
       id: '3',
@@ -20,6 +22,7 @@ export const initialState = {
       category: 'Hoodie',
       description: 'Opis produktu',
       price: '21,15',
+      image: 'src do zdjecia',
     },
     {
       id: '4',
@@ -27,6 +30,7 @@ export const initialState = {
       category: 'Hoodie',
       description: 'Opis produktu',
       price: '33,33',
+      image: 'src do zdjecia',
     },
   ],
 
