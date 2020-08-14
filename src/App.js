@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
-
-
-
 import { store } from './redux/store';
+
+import './styles/bootstrap.scss';
+import './styles/global.scss';
 
 import { MainLayout } from './components/layout/MainLayout/MainLayout';
 import { Homepage } from './components/views/Homepage/Homepage';
-import { Product } from './components/views/Product/Product';
+import { Tshirts } from './components/views/Tshirts/Tshirts';
 
 
 const App = () => (
@@ -17,7 +17,7 @@ const App = () => (
       <MainLayout>
         <Switch>
           <Route exact path='/' component={Homepage} />
-          <Route exact path='/product' component={Product} />
+          <Route exact path='/tshirts' component={Tshirts} />
         </Switch>
       </MainLayout>
     </BrowserRouter>
