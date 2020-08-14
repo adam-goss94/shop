@@ -18,7 +18,7 @@ const Component = ({className}) => (
           <nav>
             <NavLink exact to='/'>Home</NavLink>
             <NavLink to='/tshirts'>T-shirts</NavLink>
-            <NavLink to='/hoodis'>Hoodis</NavLink>
+            <NavLink to='/hoodies'>Hoodies</NavLink>
             <NavLink className={styles.cart} to='/cart'>
               <FontAwesomeIcon className={styles.icon} icon={faShoppingCart} />
               <div className={styles.counter}>0</div>
