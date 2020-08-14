@@ -17,7 +17,7 @@ const Component = ({className}) => (
         <div className={`col text-right ${styles.topRigth}`}>
           <nav>
             <NavLink exact to='/'>Home</NavLink>
-            <NavLink to='t-shirts'>T-shirts</NavLink>
+            <NavLink to='/tshirts'>T-shirts</NavLink>
             <NavLink to='/hoodis'>Hoodis</NavLink>
             <NavLink to='cart'><FontAwesomeIcon className={styles.icon} icon={faShoppingCart} /></NavLink>
           </nav>
