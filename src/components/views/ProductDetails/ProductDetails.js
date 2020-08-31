@@ -13,7 +13,6 @@ class Component extends React.Component {
 
   render() {
     const { product } = this.props;
-    console.log(product);
     return (
       <div className={styles.root}>
         <h2>Additional Details</h2>
