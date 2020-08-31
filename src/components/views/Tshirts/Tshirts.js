@@ -5,7 +5,7 @@ import styles from './Tshirts.module.scss';
 
 const Component = () => (
   <div className={styles.root}>
-    <h2>Tshirts</h2>
+    <h2>T-shirts</h2>
     <Products category='T-shirt' />
   </div>
 );
