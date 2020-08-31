@@ -10,7 +10,7 @@ const Component = () => (
     <div className='container'>
       <div className='row'>
         <div className={`col text-left ${styles.topLeft}`}>
-          <h1>TUTAJ LOGO</h1>
+          <h1>Shopline</h1>
         </div>
         <div className={`col text-right ${styles.topRigth}`}>
           <nav>
