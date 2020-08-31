@@ -6,12 +6,12 @@ import { Link } from 'react-router-dom';
 
 const Component = ({id, title, category, description, price, image}) => (
   <div className={styles.root}>
-    <Card key={id} className={styles.cards} as={Link} to={`/product/${id}`}>
+    <Card key={id} className={`text-center ${styles.cards}`}>
       <Card.Img variant="top" src={image} alt={title} className={styles.image} />
       <Card.Body className={styles.cardBody}>
         <Card.Title className={styles.title}>{title}</Card.Title>
         <Card.Subtitle className={styles.price}>{price}$</Card.Subtitle>
-        <Button variant="primary" className={styles.priceButton}>
+        <Button as={Link} to={`/product/${id}`} variant="primary" className={styles.priceButton}>
           Details
         </Button>
       </Card.Body>
