@@ -17,7 +17,7 @@ class Component extends React.Component {
       <div className={styles.root}>
         { filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
-            <Product key={product.id} {...product} />
+            <Product key={product._id} {...product} />
           ))
         ) : null
         }

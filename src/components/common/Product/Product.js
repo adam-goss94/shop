@@ -4,10 +4,10 @@ import { Card, Button } from 'react-bootstrap';
 import styles from './Product.module.scss';
 import { Link } from 'react-router-dom';
 
-const Component = ({id, title, category, description, price, image}) => (
+const Component = ({id, title, price, img}) => (
   <div className={styles.root}>
     <Card key={id} className={`text-center ${styles.cards}`}>
-      <Card.Img variant="top" src={image} alt={title} className={styles.image} />
+      <Card.Img variant="top" src={img} alt={title} className={styles.image} />
       <Card.Body className={styles.cardBody}>
         <Card.Title className={styles.title}>{title}</Card.Title>
         <Card.Subtitle className={styles.price}>{price}$</Card.Subtitle>
@@ -23,9 +23,8 @@ Component.propTypes = {
   id: PropTypes.string,
   title: PropTypes.string,
   category: PropTypes.string,
-  description: PropTypes.string,
   price: PropTypes.string,
-  image: PropTypes.string,
+  img: PropTypes.string,
 };
 
 export {
