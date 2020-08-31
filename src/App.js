@@ -24,7 +24,6 @@ class Component extends React.Component {
   componentDidMount() {
     const { fetchAllProducts } = this.props;
     fetchAllProducts();
-    console.log(this.props);
   }
 
   render() {
