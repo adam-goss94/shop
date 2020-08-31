@@ -1,0 +1,50 @@
+@import '../../../styles/settings.scss';
+
+.root {
+  text-align: center;
+  margin-top: 25px;
+
+  .detailsWrapper {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 25px;
+    max-height: 450px;
+
+    img {
+      max-width: 570px;
+      height: 450px;
+      object-fit: cover;
+      flex: 1;
+    }
+
+    .details {
+      flex: 1;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .title {
+        display: flex;
+        justify-content: space-between;
+
+        span {
+          padding: 0 10px;
+          font-size: 35px;
+
+        }
+      }
+
+      .description {
+        text-align: left;
+        margin-top: 20px;
+      }
+    }
+
+    .submit {
+      align-self: flex-end;
+    }
+
+  }
+ }

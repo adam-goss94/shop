@@ -2,6 +2,10 @@ import Axios from 'axios';
 
 /* selectors */
 export const getAll = ({products}) => products.data;
+export const getProduct = ({ products }, productId) => {
+  const filtered = products.data.filter((product) => product._id === productId);
+  return filtered.length ? filtered[0] : { error: true };
+};
 
 /* action name creator */
 const reducerName = 'products';

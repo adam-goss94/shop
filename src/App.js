@@ -13,6 +13,8 @@ import { MainLayout } from './components/layout/MainLayout/MainLayout';
 import { Homepage } from './components/views/Homepage/Homepage';
 import { Tshirts } from './components/views/Tshirts/Tshirts';
 import { Hoodies } from './components/views/Hoodies/Hoodies';
+import { Cart } from './components/views/Cart/Cart';
+import { ProductDetails } from './components/views/ProductDetails/ProductDetails';
 
 
 class Component extends React.Component {
@@ -35,6 +37,8 @@ class Component extends React.Component {
               <Route exact path='/' component={Homepage} />
               <Route exact path='/tshirts' component={Tshirts} />
               <Route exact path='/hoodies' component={Hoodies} />
+              <Route exact path='/cart' component={Cart} />
+              <Route path='/product/:id' component={ProductDetails} />
             </Switch>
           </MainLayout>
         </BrowserRouter>
