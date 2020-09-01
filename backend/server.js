@@ -28,7 +28,7 @@ app.use('*', (req, res) => {
 });
 
 /* MONGOOSE */
-mongoose.connect('mongodb://localhost:27017/shopDB', { useNewUrlParser: true });
+mongoose.connect('mongodb+srv://Adam:anime123@cluster0.5ctir.mongodb.net/shopDB?retryWrites=true&w=majority', { useNewUrlParser: true });
 const db = mongoose.connection;
 
 db.once('open', () => {
