@@ -52,10 +52,18 @@
     }
 
     .amount input{
-      display: flex;
       flex-direction: column;
       width: 50px;
       text-align: center;
+      margin-left: 5px;
+    }
+  }
+
+  a {
+    margin: 15px 0 5px 0;
+
+    &:hover {
+      background-color: $pagenav-link;
     }
   }
  }

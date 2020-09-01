@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getCart } from '../../../redux/cartRedux';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Form, FormGroup, Label, Input } from 'reactstrap';
+import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 // import { connect } from 'react-redux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
@@ -34,7 +36,7 @@ const Component = ( cart ) => {
                 <Label for="notes">Notes</Label>
                 <Input type="text" name="notes" id="notes" placeholder="Additional details" />
               </FormGroup>
-              <Button color="primary" className="mt-3">Submit order</Button>
+              <Button className={styles.remove}>Submit order</Button>
             </Form>
           </div>
           <div className={styles.contentRigth}>
@@ -45,14 +47,19 @@ const Component = ( cart ) => {
                 <span className={styles.price}>{product.price}$</span>
                 <div className={styles.amount}>
                   <Label for="amount">Amount:</Label>
-                  <input type='number' min='1' step='1' id="amount"></input>
+                  <input type='number' min='1' step='1' id="amount" />
                 </div>
+                <Button variant="primary" className={styles.removeButton}>Remove</Button>
               </div>
             ))
             }
           </div>
         </div> :
-        <p className={styles.empty}>Your cart is empty!</p> }
+        <div>
+          <p className={styles.empty}>Your cart is empty!</p>
+          <Button as={Link} variant="primary" to="/" className={styles.backButton}>Back home</Button>
+        </div>
+      }
 
     </div>
   );
