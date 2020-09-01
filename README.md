@@ -1,4 +1,4 @@
-# Shop online - Shopline
+# Shop(on)line
 
 ## Project description
 
