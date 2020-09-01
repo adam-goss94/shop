@@ -8,6 +8,7 @@ import './styles/bootstrap.scss';
 import './styles/global.scss';
 import { connect } from 'react-redux';
 import { getAll, fetchAllProducts } from './redux/productsRedux';
+import { getCart, fetchCart } from './redux/cartRedux';
 
 import { MainLayout } from './components/layout/MainLayout/MainLayout';
 import { Homepage } from './components/views/Homepage/Homepage';
@@ -21,11 +22,13 @@ class Component extends React.Component {
   static propTypes = {
     products: PropTypes.array,
     fetchAllProducts: PropTypes.func,
+    fetchCart: PropTypes.func,
   };
 
   componentDidMount() {
-    const { fetchAllProducts } = this.props;
+    const { fetchAllProducts, fetchCart } = this.props;
     fetchAllProducts();
+    fetchCart();
   }
 
   render() {
@@ -49,10 +52,12 @@ class Component extends React.Component {
 
 const mapStateToProps = (state) => ({
   products: getAll(state),
+  cart: getCart(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({
   fetchAllProducts: () => dispatch(fetchAllProducts()),
+  fetchCart: () => dispatch(fetchCart()),
 });
 
 const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
