@@ -12,7 +12,7 @@ Clone the repository and install dependencies (`yarn install`).
 
 - `yarn start` observes changes in the `src` folder, starts a frontend preview
 - `yarn server` starts a server
-- `yarn start-all` starts both of the previous scripts at one
+- `yarn start-all` starts both of the previous scripts at once
 
 ## Demo
 
