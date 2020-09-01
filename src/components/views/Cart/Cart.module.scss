@@ -4,8 +4,30 @@
   text-align: center;
   margin-top: 25px;
 
+  .empty{
+    font-size: 34px;
+    font-style: italic;
+  }
+
+  .content {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+
+  }
+
   h2 {
     margin-bottom: 20px;
+  }
+
+  .contentLeft {
+    width: 400px;
+    margin: auto;
+    text-align: left;
+  }
+  .contentRigth {
+    width: 600px;
   }
 
   .product {
@@ -26,10 +48,12 @@
     }
 
     .title {
-      font-size: 32px;
+      font-size: 24px;
     }
 
     .amount input{
+      display: flex;
+      flex-direction: column;
       width: 50px;
       text-align: center;
     }
