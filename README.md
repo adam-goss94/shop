@@ -2,7 +2,7 @@
 
 ## Project description
 
-This project is was done as the last task (standalone project) at the end of the Kodilla Web Developer Plus Bootcamp. It aims to show the skills and knowledge acquired during the bootcamp.
+This project was done as the last task (standalone project) at the end of the Kodilla Web Developer Plus Bootcamp. It aims to show the skills and knowledge acquired during the bootcamp.
 
 ## Project initiation
 
