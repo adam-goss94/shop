@@ -1,4 +1,37 @@
 @import '../../../styles/settings.scss';
 
-// .root {
-// }
+.root {
+  text-align: center;
+  margin-top: 25px;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+    margin: 5px auto 5px auto;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 10px;
+
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .title {
+      font-size: 32px;
+    }
+
+    .amount input{
+      width: 50px;
+      text-align: center;
+    }
+  }
+ }
