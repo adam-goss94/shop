@@ -1,5 +1,5 @@
 import Axios from 'axios';
-
+import { api } from '../config.js';
 /* selectors */
 export const getAll = ({products}) => products.data;
 export const getProduct = ({ products }, productId) => {
@@ -27,7 +27,7 @@ export const fetchAllProducts = () => {
     dispatch(fetchStarted());
 
     Axios
-      .get('http://localhost:8000/api/products')
+      .get(`${api.url}/products`)
       .then(res => {
         dispatch(fetchSuccess(res.data));
       })

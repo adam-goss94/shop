@@ -1,4 +1,5 @@
 import Axios from 'axios';
+import { api } from '../config.js';
 
 /* selectors */
 export const getCart = ({cart}) => cart;
@@ -27,7 +28,7 @@ export const fetchCart = () => {
     dispatch(fetchStarted());
 
     Axios
-      .get('http://localhost:8000/api/cart')
+      .get(`${api.url}/cart`)
       .then(res => {
         dispatch(fetchSuccess(res));
       })
